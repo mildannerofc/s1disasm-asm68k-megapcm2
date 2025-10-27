@@ -3,7 +3,7 @@ This is a complete translation of the Sonic 1 GitHub AS Mega PCM implementation,
 
 If you want to see the original Mega PCM 2 implementation, you can check the [Sonic 1 GitHub AS](https://github.com/vladikcomper/s1disasm-megapcm2) repository.
 
-After implementing Mega PCM 2, maybe I still do not plan to create a guide for it (Adding section for Mega PCM 2 integration in Sonic 1 ASM68K Branch from GitHub). However, I am currently unsure how to translate the implementation guide from AS to ASM68K while maintaining the sound driver's base and structure.
+After implementing Mega PCM 2, maybe I still do not plan to create a guide for it (Adding section for Mega PCM 2 integration in Sonic 1 ASM68K Branch from GitHub). I am currently unsure how to translate the implementation guide from AS to ASM68K while maintaining the sound driver's base and structure.
 
 Please note: This project may not be a secure base for your own ROM hacks at this time.
 
