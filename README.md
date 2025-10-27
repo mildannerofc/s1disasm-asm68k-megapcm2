@@ -1,18 +1,17 @@
 # Sonic 1 GitHub ASM68K with Mega PCM 2
-This is fully translated Sonic 1 GitHub AS Mega PCM Implementation with ASM68K lines and following Hivebrain a bit.
+This is a complete translation of the Sonic 1 GitHub AS Mega PCM implementation, adapted for ASM68K and loosely based on Hivebrain's work.
 
-Check [Sonic 1 GitHub AS](https://github.com/vladikcomper/s1disasm-megapcm2) if you want the actual way for Mega PCM 2 to be implemented in that disassembly as example.
+If you want to see the original Mega PCM 2 implementation, you can check the Sonic 1 GitHub AS repository.
 
-After implementing Mega PCM 2, I would make a guide for it but I didn't have any idea to translate the guide from AS to ASM68K by respecting the Sound Driver base and structure.
+After implementing Mega PCM 2, I plan to create a guide for it. However, I am currently unsure how to translate the implementation guide from AS to ASM68K while maintaining the sound driver's base and structure.
 
-It may be not secure if you are currently using this as base.
+Please note: This project may not be a secure base for your own ROM hacks at this time.
+Mega PCM 2 and the Error Handler were created by vladikcomper.
 
-Mega PCM 2 and Error Handler by vladikcomper.
+## Known Issues
+*	Cheats are not working. (This may be beneficial for your ROM hack if you prefer to prevent tampering.)
+*	It's widely rumored that you can adapt Mega PCM for ASM68K by replacing periods (`.`) with at-symbols (`@`), but this approach may be problematic.
+*	According to vladikcomper, ASM68K is slower than Macro AS.
+*	The implementation may differ significantly from the current ASM68K disassembly.
 
-## Known issues
-* Cheats aren't working (Is it be good for your ROM Hack with no people tampering with it?)
-* Every people say that you can add Mega PCM to ASM68K but with replacing from `.` to `@`
-* ASM68K is said by own vladikcomper that's slower than Macro AS
-* It may be straight off than the current disassembly
-
-If you have anything to fix, just make a pull request and I'll handle it.
+If you find a fix for any of these issues, please submit a pull request, and I will handle it.
