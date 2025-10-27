@@ -15,3 +15,5 @@ Mega PCM 2 and the Error Handler were created by vladikcomper.
 *	The implementation may differ significantly from the current ASM68K disassembly.
 
 If you find a fix for any of these issues, please submit a pull request, and I will handle it.
+
+Original disassembly used is [Sonic 1 GitHub ASM68K Branch](https://github.com/sonicretro/s1disasm/tree/asm68k)
