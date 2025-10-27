@@ -7,6 +7,8 @@ After implementing Mega PCM 2, I would make a guide for it but I didn't have any
 
 It may be not secure if you are currently using this as base.
 
+Mega PCM 2 and Error Handler by vladikcomper.
+
 ## Known issues
 * Cheats aren't working (Is it be good for your ROM Hack with no people tampering with it?)
 * Every people say that you can add Mega PCM to ASM68K but with replacing from `.` to `@`
