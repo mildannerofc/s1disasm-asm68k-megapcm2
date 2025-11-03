@@ -317,22 +317,10 @@ CheckSumCheck:
 		move.l	d7,(a6)+
 		dbf	d6,@clearRAM	; clear RAM ($FE00-$FFFF)
 
-		jsr	MegaPCM_LoadDriver
-		lea	SampleTable, a0
-		jsr	MegaPCM_LoadSampleTable
-		tst.w	d0			; was sample table loaded successfully?
-		beq.s	@SampleTableOk		; if yes, branch
-		if def(__DEBUG__)
-			; for MD Debugger v.2.5 or above
-			RaiseError "MegaPCM_LoadSampleTable returned %<.b d0>", MPCM_Debugger_LoadSampleTableException
-		else
-			illegal
-		endif
+		move.b	(z80_version).l,d0
 		andi.b	#$C0,d0
 		move.b	d0,(v_megadrive).w ; get region setting
 		move.l	#'init',(v_init).w ; set flag so checksum won't run again
-
-@SampleTableOk:
 
 GameInit:
 		lea	($FF0000).l,a6
@@ -345,6 +333,20 @@ GameInit:
 		bsr.w	VDPSetupGame
 		bsr.w	JoypadInit
 		move.b	#id_Sega,(v_gamemode).w ; set Game Mode to Sega Screen
+
+		jsr	MegaPCM_LoadDriver
+		lea	SampleTable, a0
+		jsr	MegaPCM_LoadSampleTable
+		tst.w	d0			; was sample table loaded successfully?
+		beq.s	@SampleTableOk		; if yes, branch
+		if def(__DEBUG__)
+			; for MD Debugger v.2.5 or above
+			RaiseError "MegaPCM_LoadSampleTable returned %<.b d0>", MPCM_Debugger_LoadSampleTableException
+		else
+			illegal
+		endif
+
+@SampleTableOk:
 
 MainGameLoop:
 		move.b	(v_gamemode).w,d0 ; load Game Mode
