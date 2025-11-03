@@ -10,7 +10,7 @@ After implementing Mega PCM 2, maybe I still do not plan to create a guide for i
 Mega PCM 2 and the Error Handler were created by vladikcomper.
 
 ## Known Issues
-*	Cheats are not working. (This may be beneficial for your ROM hack if you prefer to prevent tampering.)
+*	~~Cheats are not working. (This may be beneficial for your ROM hack if you prefer to prevent tampering.)~~
 *	It's widely rumored that you can adapt Mega PCM for ASM68K by replacing periods (`.`) with at-symbols (`@`), but this approach may be problematic.
 *	According to vladikcomper, ASM68K is slower than Macro AS.
 *	The implementation may differ significantly from the current ASM68K disassembly.
