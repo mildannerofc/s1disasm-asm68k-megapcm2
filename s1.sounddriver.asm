@@ -1358,9 +1358,7 @@ FMSilenceAll:
 ; ---------------------------------------------------------------------------
 ; Sound_E4: StopSoundAndMusic:
 StopAllSound:
-		moveq	#$2B,d0		; Enable/disable DAC
-		move.b	#$80,d1		; Enable DAC
-		jsr	WriteFMI(pc)
+
 		moveq	#$27,d0		; Timers, FM3/FM6 mode
 		moveq	#0,d1		; FM3/FM6 normal mode, disable timers
 		jsr	WriteFMI(pc)
@@ -1372,7 +1370,9 @@ StopAllSound:
 @clearramloop:
 		clr.l	(a0)+
 		dbf	d0,@clearramloop
-
+        MPCM_stopZ80
+        move.b  #Z_MPCM_COMMAND_STOP, MPCM_Z80_RAM+Z_MPCM_CommandInput ; stop DAC playback
+        MPCM_startZ80
 		move.b	#$80,v_sound_id(a6)	; set music to $80 (silence)
 		jsr	FMSilenceAll(pc)
 		bra.w	PSGSilenceAll
