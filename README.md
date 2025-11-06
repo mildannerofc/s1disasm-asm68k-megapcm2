@@ -1,4 +1,4 @@
-# Sonic 1 GitHub ASM68K with Mega PCM 2
+# Sonic 1 GitHub ASM68K Branch with Mega PCM 2
 This is a complete translation of the [Sonic 1 GitHub AS Mega PCM 2](https://github.com/vladikcomper/s1disasm-megapcm2) implementation, but now adapted for ASM68K and loosely based on Hivebrain's disassembly from 2005 (Due to having identical parts in code).
 
 You can use this repository as good example for implementing Mega PCM 2 (On Sonic 1 GitHub ASM68K) but you should better take a look on original guide and following how Mega PCM 2 is installed in this disassembly.
