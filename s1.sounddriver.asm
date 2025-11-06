@@ -263,16 +263,10 @@ DACUpdateTrack:
         MPCM_stopZ80                                    ; ++
         move.b  d0, MPCM_Z80_RAM+Z_MPCM_CommandInput    ; ++ send DAC sample to Mega PCM
         MPCM_startZ80                                   ; ++; locret_71CAA:
+
 @locret:
 		rts	
 ; ===========================================================================
-
-
-; ===========================================================================
-; Note: this only defines rates for samples $88-$8D, meaning $8E-$8F are invalid.
-; Also, $8C-$8D are so slow you may want to skip them.
-; byte_71CC4:
-DAC_sample_rate: dc.b $12, $15, $1C, $1D, $FF, $FF
 
 ; ||||||||||||||| S U B	R O U T	I N E |||||||||||||||||||||||||||||||||||||||
 
